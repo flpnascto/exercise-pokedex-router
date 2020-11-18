@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './pokemon.css';
 
 class Pokemon extends React.Component {
@@ -14,6 +15,7 @@ class Pokemon extends React.Component {
           </p>
         </div>
         <img src={image} alt={`${name} sprite`} />
+        <Link to={`/pokemon/${id}`}>Detalhes</Link>
       </div>
     );
   }

@@ -12,6 +12,7 @@ function App() {
         <Route exact path="/">
           <Pokedex pokemons={pokemons} />
         </Route>
+        <Route path="/pokemon:id" />
       </BrowserRouter>
     </div>
   );
