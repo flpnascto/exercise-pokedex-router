@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import pokemons from './data';
 import Pokedex from './Pokedex';
+import PokemonDetails from './PokemonDetails';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route exact path="/">
           <Pokedex pokemons={pokemons} />
         </Route>
-        <Route path="/pokemon:id" />
+        <Route path="/pokemon/:id" render={props => <PokemonDetails {...props} pokemons={pokemons} /> }/>
       </BrowserRouter>
     </div>
   );
